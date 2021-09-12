@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C6D08CC-185B-4125-AC3C-433D6915A0CE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LlavesHsm</RootNamespace>
+    <AssemblyName>LlavesHsm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmLlavesHsm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLlavesHsm.Designer.cs">
+      <DependentUpon>FrmLlavesHsm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginDiaog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginDiaog.Designer.cs">
+      <DependentUpon>LoginDiaog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmLlavesHsm.resx">
+      <DependentUpon>FrmLlavesHsm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginDiaog.resx">
+      <DependentUpon>LoginDiaog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HSMXml\HSMXml.csproj">
+      <Project>{3D914ACD-FE36-4AB5-A53D-1FFC1FA85872}</Project>
+      <Name>HSMXml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\connect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\key_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\key_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\tooth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\textfield_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\screen_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\page_white_lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\arrow_rotate_anticlockwise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\computer_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Iconos\32x32\door_in.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
